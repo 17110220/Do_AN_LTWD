@@ -283,6 +283,7 @@
             this.lbdanhmucquanlynhanvien.Name = "lbdanhmucquanlynhanvien";
             this.lbdanhmucquanlynhanvien.Size = new System.Drawing.Size(294, 24);
             this.lbdanhmucquanlynhanvien.TabIndex = 0;
+            this.lbdanhmucquanlynhanvien.Tag = "1";
             this.lbdanhmucquanlynhanvien.Text = "Danh Mục Quản Lý Nhân Viên";
             // 
             // DanhMucNhanVien

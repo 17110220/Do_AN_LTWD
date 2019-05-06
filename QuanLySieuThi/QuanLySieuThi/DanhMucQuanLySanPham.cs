@@ -12,9 +12,23 @@ namespace QuanLySieuThi
 {
     public partial class DanhMucQuanLySanPham : Form
     {
+        ZoomManHinh _form_resize;
+        private void _Load(object sender, EventArgs e)
+        {
+            _form_resize._get_initial_size();
+        }
+
+        private void _Resize(object sender, EventArgs e)
+        {
+            _form_resize._resize();
+        }
+
         public DanhMucQuanLySanPham()
         {
             InitializeComponent();
+            _form_resize = new ZoomManHinh(this);
+            this.Load += _Load;
+            this.Resize += _Resize;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

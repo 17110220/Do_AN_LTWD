@@ -301,12 +301,15 @@
             // 
             // lbdanhmucquanlysanpham
             // 
+            this.lbdanhmucquanlysanpham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbdanhmucquanlysanpham.AutoSize = true;
-            this.lbdanhmucquanlysanpham.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbdanhmucquanlysanpham.Location = new System.Drawing.Point(225, 15);
+            this.lbdanhmucquanlysanpham.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbdanhmucquanlysanpham.Location = new System.Drawing.Point(0, 0);
             this.lbdanhmucquanlysanpham.Name = "lbdanhmucquanlysanpham";
-            this.lbdanhmucquanlysanpham.Size = new System.Drawing.Size(290, 24);
+            this.lbdanhmucquanlysanpham.Size = new System.Drawing.Size(477, 37);
             this.lbdanhmucquanlysanpham.TabIndex = 1;
+            this.lbdanhmucquanlysanpham.Tag = "1";
             this.lbdanhmucquanlysanpham.Text = "Danh Mục Quản Lý Sản Phẩm";
             // 
             // DanhMucQuanLySanPham
