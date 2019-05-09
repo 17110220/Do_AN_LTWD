@@ -180,17 +180,17 @@
             // 
             // txtghichu
             // 
-            this.txtghichu.Location = new System.Drawing.Point(477, 80);
+            this.txtghichu.Location = new System.Drawing.Point(375, 99);
             this.txtghichu.Multiline = true;
             this.txtghichu.Name = "txtghichu";
-            this.txtghichu.Size = new System.Drawing.Size(229, 60);
+            this.txtghichu.Size = new System.Drawing.Size(164, 60);
             this.txtghichu.TabIndex = 16;
             // 
             // txtdonvitinh
             // 
-            this.txtdonvitinh.Location = new System.Drawing.Point(477, 49);
+            this.txtdonvitinh.Location = new System.Drawing.Point(454, 46);
             this.txtdonvitinh.Name = "txtdonvitinh";
-            this.txtdonvitinh.Size = new System.Drawing.Size(229, 20);
+            this.txtdonvitinh.Size = new System.Drawing.Size(85, 20);
             this.txtdonvitinh.TabIndex = 15;
             // 
             // txtgiaban
@@ -233,7 +233,7 @@
             // 
             this.lbdonvitinh.AutoSize = true;
             this.lbdonvitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbdonvitinh.Location = new System.Drawing.Point(397, 52);
+            this.lbdonvitinh.Location = new System.Drawing.Point(372, 49);
             this.lbdonvitinh.Name = "lbdonvitinh";
             this.lbdonvitinh.Size = new System.Drawing.Size(76, 13);
             this.lbdonvitinh.TabIndex = 9;
@@ -243,7 +243,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(397, 83);
+            this.label7.Location = new System.Drawing.Point(372, 83);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 8;

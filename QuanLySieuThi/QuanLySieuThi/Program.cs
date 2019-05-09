@@ -16,7 +16,7 @@ namespace QuanLySieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DanhMucChiTietHoaDon());
+            Application.Run(new Main());
         }
     }
 }

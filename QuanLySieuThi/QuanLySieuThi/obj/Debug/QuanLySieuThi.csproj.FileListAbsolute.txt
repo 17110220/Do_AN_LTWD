@@ -28,3 +28,8 @@ D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\obj\Debu
 D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.csproj.CoreCompileInputs.cache
 D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.exe
 D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.pdb
+D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\bin\Debug\EntityFramework.dll
+D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\bin\Debug\EntityFramework.SqlServer.dll
+D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\bin\Debug\EntityFramework.xml
+D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\bin\Debug\EntityFramework.SqlServer.xml
+D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.csproj.CopyComplete

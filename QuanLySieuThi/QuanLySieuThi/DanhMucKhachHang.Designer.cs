@@ -36,10 +36,10 @@
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtdienthoai = new System.Windows.Forms.TextBox();
+            this.txtdiachi = new System.Windows.Forms.TextBox();
+            this.txttenkh = new System.Windows.Forms.TextBox();
+            this.txtmakh = new System.Windows.Forms.TextBox();
             this.lbdienthoai = new System.Windows.Forms.Label();
             this.lbtenkh = new System.Windows.Forms.Label();
             this.lbdiachi = new System.Windows.Forms.Label();
@@ -60,10 +60,10 @@
             this.panel1.Controls.Add(this.btnxoa);
             this.panel1.Controls.Add(this.btnthem);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtdienthoai);
+            this.panel1.Controls.Add(this.txtdiachi);
+            this.panel1.Controls.Add(this.txttenkh);
+            this.panel1.Controls.Add(this.txtmakh);
             this.panel1.Controls.Add(this.lbdienthoai);
             this.panel1.Controls.Add(this.lbtenkh);
             this.panel1.Controls.Add(this.lbdiachi);
@@ -86,6 +86,7 @@
             this.btndong.TabIndex = 20;
             this.btndong.Text = "Đóng";
             this.btndong.UseVisualStyleBackColor = false;
+            this.btndong.Click += new System.EventHandler(this.btndong_Click);
             // 
             // btnboqua
             // 
@@ -99,6 +100,7 @@
             this.btnboqua.TabIndex = 19;
             this.btnboqua.Text = "Bỏ qua";
             this.btnboqua.UseVisualStyleBackColor = false;
+            this.btnboqua.Click += new System.EventHandler(this.btnboqua_Click);
             // 
             // btnluu
             // 
@@ -112,6 +114,7 @@
             this.btnluu.TabIndex = 18;
             this.btnluu.Text = "Lưu";
             this.btnluu.UseVisualStyleBackColor = false;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // btnsua
             // 
@@ -125,6 +128,7 @@
             this.btnsua.TabIndex = 17;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = false;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnxoa
             // 
@@ -138,6 +142,7 @@
             this.btnxoa.TabIndex = 16;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = false;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnthem
             // 
@@ -151,6 +156,7 @@
             this.btnthem.TabIndex = 15;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = false;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // dataGridView1
             // 
@@ -160,33 +166,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(752, 238);
             this.dataGridView1.TabIndex = 14;
             // 
-            // textBox4
+            // txtdienthoai
             // 
-            this.textBox4.Location = new System.Drawing.Point(498, 89);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(264, 20);
-            this.textBox4.TabIndex = 11;
+            this.txtdienthoai.Location = new System.Drawing.Point(498, 89);
+            this.txtdienthoai.Name = "txtdienthoai";
+            this.txtdienthoai.Size = new System.Drawing.Size(264, 20);
+            this.txtdienthoai.TabIndex = 11;
             // 
-            // textBox3
+            // txtdiachi
             // 
-            this.textBox3.Location = new System.Drawing.Point(499, 53);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(264, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtdiachi.Location = new System.Drawing.Point(499, 53);
+            this.txtdiachi.Name = "txtdiachi";
+            this.txtdiachi.Size = new System.Drawing.Size(264, 20);
+            this.txtdiachi.TabIndex = 10;
             // 
-            // textBox2
+            // txttenkh
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(264, 20);
-            this.textBox2.TabIndex = 9;
+            this.txttenkh.Location = new System.Drawing.Point(139, 93);
+            this.txttenkh.Name = "txttenkh";
+            this.txttenkh.Size = new System.Drawing.Size(264, 20);
+            this.txttenkh.TabIndex = 9;
             // 
-            // textBox1
+            // txtmakh
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtmakh.Location = new System.Drawing.Point(140, 56);
+            this.txtmakh.Name = "txtmakh";
+            this.txtmakh.Size = new System.Drawing.Size(264, 20);
+            this.txtmakh.TabIndex = 8;
             // 
             // lbdienthoai
             // 
@@ -248,6 +254,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DanhMucKhachHang";
             this.Text = "Danh Mục Khách Hàng";
+            this.Load += new System.EventHandler(this.DanhMucKhachHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -266,10 +273,10 @@
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.Button btnthem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtdienthoai;
+        private System.Windows.Forms.TextBox txtdiachi;
+        private System.Windows.Forms.TextBox txttenkh;
+        private System.Windows.Forms.TextBox txtmakh;
         private System.Windows.Forms.Label lbdienthoai;
         private System.Windows.Forms.Label lbtenkh;
         private System.Windows.Forms.Label lbdiachi;
