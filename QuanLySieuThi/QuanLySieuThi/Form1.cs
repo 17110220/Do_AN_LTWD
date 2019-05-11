@@ -12,8 +12,8 @@ namespace QuanLySieuThi
 {
     public partial class Main : Form
     {
-        //ZoomManHinh _form_resize;
-        
+        public static bool bIsLogin = false;//Biến tĩnh ghi nhận tình trạng đăng nhập
+
         public Main()
         {
             InitializeComponent();
@@ -60,6 +60,31 @@ namespace QuanLySieuThi
            DangNhap login = new DangNhap();
 
             login.ShowDialog();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            if (bIsLogin == true)
+            {
+                this.danhMucToolStripMenuItem.Enabled = true;
+                this.tìmKiếmToolStripMenuItem.Enabled = true;
+                this.báoCáoToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                this.danhMucToolStripMenuItem.Enabled = false;
+                this.tìmKiếmToolStripMenuItem.Enabled = false;
+                this.báoCáoToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult traloi;
+            traloi = MessageBox.Show("Chắc không?", "Trả lời",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+                Application.Exit();
         }
     }
 }
