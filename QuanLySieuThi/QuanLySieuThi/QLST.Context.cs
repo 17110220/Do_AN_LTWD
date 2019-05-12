@@ -13,10 +13,10 @@ namespace QuanLySieuThi
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuanLySieuThiEntities : DbContext
+    public partial class QLSTContainer : DbContext
     {
-        public QuanLySieuThiEntities()
-            : base("name=QuanLySieuThiEntities")
+        public QLSTContainer()
+            : base("name=QLSTContainer")
         {
         }
     
@@ -25,14 +25,5 @@ namespace QuanLySieuThi
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
-        public virtual DbSet<ChucVu> ChucVus { get; set; }
-        public virtual DbSet<HoaDon> HoaDons { get; set; }
-        public virtual DbSet<KhachHang> KhachHangs { get; set; }
-        public virtual DbSet<NhanVien> NhanViens { get; set; }
-        public virtual DbSet<NhaSX> NhaSXes { get; set; }
-        public virtual DbSet<Phan_quyen> Phan_quyen { get; set; }
-        public virtual DbSet<SanPham> SanPhams { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }
