@@ -33,3 +33,5 @@ D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\bin\Debu
 D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\bin\Debug\EntityFramework.xml
 D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\bin\Debug\EntityFramework.SqlServer.xml
 D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.csproj.CopyComplete
+D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Lập Trình Window\Bài Làm\Do_AN_LTWD\QuanLySieuThi\QuanLySieuThi\bin\Debug\DevComponents.DotNetBar2.xml
