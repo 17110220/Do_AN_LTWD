@@ -61,12 +61,6 @@
     <Compile Include="BS_Layer\BLKhachHang.cs" />
     <Compile Include="BS_Layer\BLNhanVien.cs" />
     <Compile Include="BS_Layer\BLSanPham.cs" />
-    <Compile Include="ChiTietHoaDon.cs">
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ChucVu.cs">
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,44 +98,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoaDon.cs">
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
-    <Compile Include="KhachHang.cs">
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NhanVien.cs">
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NhaSX.cs">
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Phan_quyen.cs">
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLySieuThi.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLySieuThi.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLySieuThi.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLySieuThi.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="SanPham.cs">
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
-    </Compile>
     <Compile Include="BS_Layer\User.cs" />
     <Compile Include="ZoomManHinh.cs" />
     <EmbeddedResource Include="DangNhap.resx">
@@ -187,13 +145,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="QuanLySieuThi.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanLySieuThi.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="QuanLySieuThi.edmx.diagram">
-      <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
-    </None>
     <None Include="Resources\hinh-nen-powerpoint-don-gian-dep-2_045404959.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -201,18 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\phan-mem-quan-ly-sieu-thi-minimart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="QuanLySieuThi.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
-      <LastGenOutput>QuanLySieuThi.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="QuanLySieuThi.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
-      <LastGenOutput>QuanLySieuThi.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
