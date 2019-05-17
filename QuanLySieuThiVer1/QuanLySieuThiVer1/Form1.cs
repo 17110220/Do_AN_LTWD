@@ -41,7 +41,11 @@ namespace QuanLySieuThiVer1
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DialogResult traloi;
+            traloi = MessageBox.Show("Chắc không?", "Trả lời",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+                Application.Exit();
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -54,10 +58,42 @@ namespace QuanLySieuThiVer1
                 this.tìmKiếmToolStripMenuItem.Enabled = true;
             }
             else
+            {
                 this.quảnLýToolStripMenuItem.Enabled = false;
-            this.thốngKêToolStripMenuItem.Enabled = false;
-            this.báoCáoToolStripMenuItem.Enabled = false;
-            this.tìmKiếmToolStripMenuItem.Enabled = false;
+                this.thốngKêToolStripMenuItem.Enabled = false;
+                this.báoCáoToolStripMenuItem.Enabled = false;
+                this.tìmKiếmToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private void tìmKiếmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TimKhachHang tkkh = new TimKhachHang();
+            tkkh.Show();
+        }
+
+        private void danhMụcChiTiếtHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChiTietHoaDon cthd = new ChiTietHoaDon();
+            cthd.Show();
+        }
+
+        private void danhMụcKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             KhachHang kh = new KhachHang();
+             kh.Show();
+        }
+
+        private void danhMụcNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhanVien nv = new NhanVien();
+            nv.Show();
+        }
+
+        private void danhMụcSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SanPham sp = new SanPham();
+            sp.Show();
         }
     }
 }

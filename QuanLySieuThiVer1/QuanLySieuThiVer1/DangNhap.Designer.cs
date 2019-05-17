@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhap));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPassWord = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.BtnThoat = new System.Windows.Forms.Button();
             this.reflectionImage1 = new DevComponents.DotNetBar.Controls.ReflectionImage();
+            this.BtnThoat = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtPassWord = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,59 +59,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Đăng Nhập";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(135, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "UserName";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "PassWord";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(209, 48);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(192, 22);
-            this.txtUserName.TabIndex = 2;
-            // 
-            // txtPassWord
-            // 
-            this.txtPassWord.Location = new System.Drawing.Point(209, 92);
-            this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.PasswordChar = '*';
-            this.txtPassWord.Size = new System.Drawing.Size(192, 22);
-            this.txtPassWord.TabIndex = 3;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(76, 175);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(99, 33);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // BtnThoat
-            // 
-            this.BtnThoat.Location = new System.Drawing.Point(213, 175);
-            this.BtnThoat.Name = "BtnThoat";
-            this.BtnThoat.Size = new System.Drawing.Size(99, 33);
-            this.BtnThoat.TabIndex = 5;
-            this.BtnThoat.Text = "Thoát";
-            this.BtnThoat.UseVisualStyleBackColor = true;
-            this.BtnThoat.Click += new System.EventHandler(this.BtnThoat_Click);
-            // 
             // reflectionImage1
             // 
             // 
@@ -124,6 +71,58 @@
             this.reflectionImage1.Name = "reflectionImage1";
             this.reflectionImage1.Size = new System.Drawing.Size(133, 128);
             this.reflectionImage1.TabIndex = 6;
+            // 
+            // BtnThoat
+            // 
+            this.BtnThoat.Location = new System.Drawing.Point(213, 175);
+            this.BtnThoat.Name = "BtnThoat";
+            this.BtnThoat.Size = new System.Drawing.Size(99, 33);
+            this.BtnThoat.TabIndex = 5;
+            this.BtnThoat.Text = "Thoát";
+            this.BtnThoat.UseVisualStyleBackColor = true;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(76, 175);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(99, 33);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtPassWord
+            // 
+            this.txtPassWord.Location = new System.Drawing.Point(209, 92);
+            this.txtPassWord.Name = "txtPassWord";
+            this.txtPassWord.PasswordChar = '*';
+            this.txtPassWord.Size = new System.Drawing.Size(192, 22);
+            this.txtPassWord.TabIndex = 3;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(209, 48);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(192, 22);
+            this.txtUserName.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(133, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "PassWord";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(135, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "UserName";
             // 
             // DangNhap
             // 

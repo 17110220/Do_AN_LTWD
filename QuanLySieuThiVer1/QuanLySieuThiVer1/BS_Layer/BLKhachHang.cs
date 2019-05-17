@@ -22,18 +22,19 @@ namespace QuanLySieuThiVer1.BS_Layer
         }
         public bool ThemKhachHang(string MaKH, string TenKH, string DiaChiKH,  string SDT,  ref string err)
         {
-            string sqlString = "Insert Into MaKH Values(" + "'" + MaKH + "',N'" + TenKH + "',N'" + DiaChiKH +  "'" + SDT + "')";
+            string sqlString = "Insert Into KhachHang Values(' " +  MaKH + "',N'" + TenKH + "',N'" + DiaChiKH +  "',N'" + SDT + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool XoaKhachhang(ref string err, string MaNV)
+        public bool XoaKhachhang(ref string err, string MaKH)
         {
-            string sqlString = "Delete From NhanVien Where MaNV='" + MaNV + "'";
+            string sqlString = "Delete From KhachHang Where MaKH='" + MaKH + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool CapNhatKhachHang(string MaKH, string TenKH, string DiaChiKH, string SDT, ref string err)
         {
-            string sqlString = "Update KhachHang Set TenKH=N'" + TenKH + "DiaChiKH=N'" + DiaChiKH +  "SDT='" + SDT + "' Where MaKH='" + MaKH + "'";
+            string sqlString = "Update KhachHang Set TenKH=N'" + TenKH + "',DiaChiKH=N'" + DiaChiKH +  "',SDT=N'" + SDT + "' Where MaKH='" + MaKH + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+
     }
 }

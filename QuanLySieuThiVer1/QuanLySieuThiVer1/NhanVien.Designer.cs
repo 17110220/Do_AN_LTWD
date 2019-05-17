@@ -37,14 +37,6 @@
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nam = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.MaQuayGiaoDich = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chnam = new System.Windows.Forms.CheckBox();
             this.txtdienthoai = new System.Windows.Forms.TextBox();
             this.txtdiachi = new System.Windows.Forms.TextBox();
             this.txttennv = new System.Windows.Forms.TextBox();
@@ -56,15 +48,17 @@
             this.lbdiachi = new System.Windows.Forms.Label();
             this.lbmanv = new System.Windows.Forms.Label();
             this.lbdanhmucquanlynhanvien = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.quanLySieuThiDataSet = new QuanLySieuThiVer1.QuanLySieuThiDataSet();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pannel = new System.Windows.Forms.Panel();
             this.quayGiaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quayGiaoDichTableAdapter = new QuanLySieuThiVer1.QuanLySieuThiDataSetTableAdapters.QuayGiaoDichTableAdapter();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLySieuThiDataSet)).BeginInit();
+            this.pannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quayGiaoDichBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,68 +164,12 @@
             this.DiaChi,
             this.NgSinh,
             this.SDT,
-            this.Nam,
-            this.MaQuayGiaoDich});
+            this.Nam});
             this.dataGridView1.Location = new System.Drawing.Point(2, 161);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 199);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã Nhân Viên";
-            this.MaNV.Name = "MaNV";
-            // 
-            // HoTenNV
-            // 
-            this.HoTenNV.DataPropertyName = "HoTenNV";
-            this.HoTenNV.HeaderText = "Tên Nhân Viên";
-            this.HoTenNV.Name = "HoTenNV";
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            // 
-            // NgSinh
-            // 
-            this.NgSinh.DataPropertyName = "NgSinh";
-            this.NgSinh.HeaderText = "Ngày Sinh";
-            this.NgSinh.Name = "NgSinh";
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "SDT";
-            this.SDT.Name = "SDT";
-            // 
-            // Nam
-            // 
-            this.Nam.DataPropertyName = "Nam";
-            this.Nam.HeaderText = "Nam";
-            this.Nam.Name = "Nam";
-            this.Nam.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Nam.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // MaQuayGiaoDich
-            // 
-            this.MaQuayGiaoDich.DataPropertyName = "MaQuayGiaoDich";
-            this.MaQuayGiaoDich.HeaderText = "Mã Quầy Giao Dịch";
-            this.MaQuayGiaoDich.Name = "MaQuayGiaoDich";
-            // 
-            // chnam
-            // 
-            this.chnam.AutoSize = true;
-            this.chnam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chnam.Location = new System.Drawing.Point(104, 135);
-            this.chnam.Name = "chnam";
-            this.chnam.Size = new System.Drawing.Size(59, 20);
-            this.chnam.TabIndex = 13;
-            this.chnam.Text = "Nam";
-            this.chnam.UseVisualStyleBackColor = true;
             // 
             // txtdienthoai
             // 
@@ -333,83 +271,94 @@
             this.lbdanhmucquanlynhanvien.Tag = "";
             this.lbdanhmucquanlynhanvien.Text = "Danh Mục Quản Lý Nhân Viên";
             // 
-            // panel1
+            // pannel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dangaysinh);
-            this.panel1.Controls.Add(this.btndong);
-            this.panel1.Controls.Add(this.btnboqua);
-            this.panel1.Controls.Add(this.btnluu);
-            this.panel1.Controls.Add(this.btnsua);
-            this.panel1.Controls.Add(this.btnxoa);
-            this.panel1.Controls.Add(this.btnthem);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.chnam);
-            this.panel1.Controls.Add(this.txtdienthoai);
-            this.panel1.Controls.Add(this.txtdiachi);
-            this.panel1.Controls.Add(this.txttennv);
-            this.panel1.Controls.Add(this.txtmanv);
-            this.panel1.Controls.Add(this.lbngaysinh);
-            this.panel1.Controls.Add(this.lbgioitinh);
-            this.panel1.Controls.Add(this.lbdienthoai);
-            this.panel1.Controls.Add(this.lbtennv);
-            this.panel1.Controls.Add(this.lbdiachi);
-            this.panel1.Controls.Add(this.lbmanv);
-            this.panel1.Controls.Add(this.lbdanhmucquanlynhanvien);
-            this.panel1.Location = new System.Drawing.Point(12, 8);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(798, 437);
-            this.panel1.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.quayGiaoDichBindingSource;
-            this.comboBox1.DisplayMember = "MaQuayGiaoDich";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(280, 133);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 24;
-            // 
-            // quanLySieuThiDataSet
-            // 
-            this.quanLySieuThiDataSet.DataSetName = "QuanLySieuThiDataSet";
-            this.quanLySieuThiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Mã Quầy";
+            this.pannel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pannel.Controls.Add(this.txtGioiTinh);
+            this.pannel.Controls.Add(this.dangaysinh);
+            this.pannel.Controls.Add(this.btndong);
+            this.pannel.Controls.Add(this.btnboqua);
+            this.pannel.Controls.Add(this.btnluu);
+            this.pannel.Controls.Add(this.btnsua);
+            this.pannel.Controls.Add(this.btnxoa);
+            this.pannel.Controls.Add(this.btnthem);
+            this.pannel.Controls.Add(this.dataGridView1);
+            this.pannel.Controls.Add(this.txtdienthoai);
+            this.pannel.Controls.Add(this.txtdiachi);
+            this.pannel.Controls.Add(this.txttennv);
+            this.pannel.Controls.Add(this.txtmanv);
+            this.pannel.Controls.Add(this.lbngaysinh);
+            this.pannel.Controls.Add(this.lbgioitinh);
+            this.pannel.Controls.Add(this.lbdienthoai);
+            this.pannel.Controls.Add(this.lbtennv);
+            this.pannel.Controls.Add(this.lbdiachi);
+            this.pannel.Controls.Add(this.lbmanv);
+            this.pannel.Controls.Add(this.lbdanhmucquanlynhanvien);
+            this.pannel.Location = new System.Drawing.Point(12, 8);
+            this.pannel.Name = "pannel";
+            this.pannel.Size = new System.Drawing.Size(798, 437);
+            this.pannel.TabIndex = 2;
             // 
             // quayGiaoDichBindingSource
             // 
             this.quayGiaoDichBindingSource.DataMember = "QuayGiaoDich";
-            this.quayGiaoDichBindingSource.DataSource = this.quanLySieuThiDataSet;
             // 
-            // quayGiaoDichTableAdapter
+            // txtGioiTinh
             // 
-            this.quayGiaoDichTableAdapter.ClearBeforeFill = true;
+            this.txtGioiTinh.Location = new System.Drawing.Point(126, 131);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.Size = new System.Drawing.Size(100, 20);
+            this.txtGioiTinh.TabIndex = 22;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã Nhân Viên";
+            this.MaNV.Name = "MaNV";
+            // 
+            // HoTenNV
+            // 
+            this.HoTenNV.DataPropertyName = "HoTenNV";
+            this.HoTenNV.HeaderText = "Tên Nhân Viên";
+            this.HoTenNV.Name = "HoTenNV";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            // 
+            // NgSinh
+            // 
+            this.NgSinh.DataPropertyName = "NgSinh";
+            this.NgSinh.HeaderText = "Ngày Sinh";
+            this.NgSinh.Name = "NgSinh";
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "SDT";
+            this.SDT.Name = "SDT";
+            // 
+            // Nam
+            // 
+            this.Nam.DataPropertyName = "GioiTinh";
+            this.Nam.HeaderText = "Giới Tính";
+            this.Nam.Name = "Nam";
+            this.Nam.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pannel);
             this.Name = "NhanVien";
             this.Text = "NhanVien";
             this.Load += new System.EventHandler(this.NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLySieuThiDataSet)).EndInit();
+            this.pannel.ResumeLayout(false);
+            this.pannel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quayGiaoDichBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -425,7 +374,6 @@
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.Button btnthem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox chnam;
         private System.Windows.Forms.TextBox txtdienthoai;
         private System.Windows.Forms.TextBox txtdiachi;
         private System.Windows.Forms.TextBox txttennv;
@@ -437,18 +385,15 @@
         private System.Windows.Forms.Label lbdiachi;
         private System.Windows.Forms.Label lbmanv;
         private System.Windows.Forms.Label lbdanhmucquanlynhanvien;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pannel;
+       
+        private System.Windows.Forms.BindingSource quayGiaoDichBindingSource;
+        private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgSinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Nam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaQuayGiaoDich;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private QuanLySieuThiDataSet quanLySieuThiDataSet;
-        private System.Windows.Forms.BindingSource quayGiaoDichBindingSource;
-        private QuanLySieuThiDataSetTableAdapters.QuayGiaoDichTableAdapter quayGiaoDichTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
     }
 }

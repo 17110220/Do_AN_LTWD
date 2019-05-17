@@ -47,17 +47,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BS_Layer\BLChiTietHoaDon.cs" />
+    <Compile Include="ConTrol\ChiTietHoaDonCtr.cs" />
+    <Compile Include="ConTrol\HoaDonCtr.cs" />
+    <Compile Include="ConTrol\KhachHangCtr1.cs" />
+    <Compile Include="ConTrol\SanPhamCtr.cs" />
+    <Compile Include="DaTa\ChiTietHoaDonDaTa.cs" />
+    <Compile Include="BS_Layer\BLHoaDon.cs" />
     <Compile Include="BS_Layer\BLKhachHang.cs" />
     <Compile Include="BS_Layer\BLNhanVien.cs" />
-    <Compile Include="BS_Layer\BLNhaSanXuat.cs" />
+    <Compile Include="BS_Layer\BLPhanQuyen.cs" />
     <Compile Include="BS_Layer\BLSanPham.cs" />
+    <Compile Include="BS_Layer\BlTimKiemKhachHang.cs" />
+    <Compile Include="ConTrol\NhanVienCtr.cs" />
+    <Compile Include="DaTa\HoaDonDaTa.cs" />
+    <Compile Include="DaTa\KhachHangDaTa.cs" />
+    <Compile Include="DaTa\NhanVienDaTa.cs" />
+    <Compile Include="DaTa\SanPhamDaTa.cs" />
+    <Compile Include="Info\ChiTietHoaDonInfo.cs" />
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="BS_Layer\DaTaServer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DB_Layer\Funtion.cs" />
     <Compile Include="DB_Layer\KetNoi.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -65,12 +81,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiTiethoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiethoaDon.Designer.cs">
+      <DependentUpon>ChiTiethoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info\HoaDonInfo.cs" />
+    <Compile Include="Info\KhachHangInfo.cs" />
+    <Compile Include="Info\NhanVienInfo.cs" />
+    <Compile Include="Info\SanPhamInfo.cs" />
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KhachHang.Designer.cs">
       <DependentUpon>KhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConTrol\KhachHangCtr.cs" />
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,24 +112,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLySieuThiDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLySieuThiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLySieuThiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuyDinh.cs" />
     <Compile Include="SanPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SanPham.Designer.cs">
       <DependentUpon>SanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="TimKiemKhachHang.cs">
+    <Compile Include="TimKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TimKiemKhachHang.Designer.cs">
-      <DependentUpon>TimKiemKhachHang.cs</DependentUpon>
+    <Compile Include="TimKhachHang.Designer.cs">
+      <DependentUpon>TimKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiethoaDon.resx">
+      <DependentUpon>ChiTiethoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>
@@ -122,8 +157,8 @@
     <EmbeddedResource Include="SanPham.resx">
       <DependentUpon>SanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TimKiemKhachHang.resx">
-      <DependentUpon>TimKiemKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="TimKhachHang.resx">
+      <DependentUpon>TimKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -144,6 +179,17 @@
     </None>
     <None Include="QuanLySieuThiDataSet.xss">
       <DependentUpon>QuanLySieuThiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLySieuThiDataSet1.xsc">
+      <DependentUpon>QuanLySieuThiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLySieuThiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLySieuThiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLySieuThiDataSet1.xss">
+      <DependentUpon>QuanLySieuThiDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

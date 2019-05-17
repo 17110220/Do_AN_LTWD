@@ -41,8 +41,8 @@ namespace QuanLySieuThiVer1
                 this.txtgiaban.ResetText();
                 this.txtsoluong.ResetText();
                 this.txtdonvitinh.ResetText();
-                
-                this.dateTimePicker1.ResetText();
+
+              
                 this.btnluu.Enabled = false;
                 this.btnboqua.Enabled = false;
                 this.btnthem.Enabled = true;
@@ -66,29 +66,21 @@ namespace QuanLySieuThiVer1
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Kich hoạt biến Them
-            Them = true;
-            // Xóa trống các đối tượng trong Panel
-            this.txtmasp.ResetText();
-            this.txttensp.ResetText();
-            this.txtgianhap.ResetText();
-            this.txtgiaban.ResetText();
-            this.txtsoluong.ResetText();
-            this.txtdonvitinh.ResetText();
-           
-            this.dateTimePicker1.ResetText();
-            // Cho thao tác trên các nút Lưu / Hủy / Panel
-            this.btnluu.Enabled = true;
-            this.btnboqua.Enabled = true;
-
-            this.panel1.Enabled = true;
-            // Không cho thao tác trên các nút Thêm / Xóa / Thoát
-            this.btnthem.Enabled = false;
-            this.btnsua.Enabled = false;
-            this.btnxoa.Enabled = false;
-            this.btndong.Enabled = false;
-            // Đưa con trỏ đến TextField txtThanhPho
-            this.txtmasp.Focus();
+            // Thứ tự dòng hiện hành
+            int r = dataGridView1.CurrentCell.RowIndex;
+            // Chuyển thông tin lên panel
+            this.txtmasp.Text =
+            dataGridView1.Rows[r].Cells[0].Value.ToString();
+            this.txttensp.Text =
+            dataGridView1.Rows[r].Cells[1].Value.ToString();
+            this.txtgianhap.Text =
+           dataGridView1.Rows[r].Cells[2].Value.ToString();
+            this.txtgiaban.Text =
+           dataGridView1.Rows[r].Cells[3].Value.ToString();
+            this.txtsoluong.Text =
+           dataGridView1.Rows[r].Cells[4].Value.ToString();
+            this.txtdonvitinh.Text =
+           dataGridView1.Rows[r].Cells[5].Value.ToString();
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -102,8 +94,8 @@ namespace QuanLySieuThiVer1
             this.txtgiaban.ResetText();
             this.txtsoluong.ResetText();
             this.txtdonvitinh.ResetText();
+
            
-            this.dateTimePicker1.ResetText();
             // Cho thao tác trên các nút Lưu / Hủy / Panel
             this.btnluu.Enabled = true;
             this.btnboqua.Enabled = true;
@@ -187,7 +179,7 @@ namespace QuanLySieuThiVer1
                 {
                     // Thực hiện lệnh
                     BLSanPham blSP = new BLSanPham();
-                    blSP.ThemSanPham(this.txtmasp.Text, this.txttensp.Text, this.txtgianhap.Text, this.txtgiaban.Text, this.txtsoluong.Text, this.dateTimePicker1.Value, this.txtdonvitinh.Text, ref err);
+                    blSP.ThemSanPham(this.txtmasp.Text, this.txttensp.Text, this.txtgianhap.Text, this.txtgiaban.Text, this.txtsoluong.Text,  this.txtdonvitinh.Text, ref err);
                     // Load lại dữ liệu trên DataGridView
                     LoadData();
                     // Thông báo
@@ -202,7 +194,7 @@ namespace QuanLySieuThiVer1
             {
                 // Thực hiện lệnh
                 BLSanPham blTp = new BLSanPham();
-                blTp.CapNhatSanPham(this.txtmasp.Text, this.txttensp.Text, this.txtgianhap.Text, this.txtgiaban.Text ,this.txtsoluong.Text,this.dateTimePicker1.Value,this.txtdonvitinh.Text,ref err);// Load lại dữ liệu trên DataGridView
+                blTp.CapNhatSanPham(this.txtmasp.Text, this.txttensp.Text, this.txtgianhap.Text, this.txtgiaban.Text, this.txtsoluong.Text, this.txtdonvitinh.Text, ref err);// Load lại dữ liệu trên DataGridView
                 LoadData();
                 // Thông báo
                 MessageBox.Show("Đã sửa xong!");
@@ -212,23 +204,22 @@ namespace QuanLySieuThiVer1
 
         private void btnboqua_Click(object sender, EventArgs e)
         {
-            //// Xóa trống các đối tượng trong Panel
-            //this.txtmanv.ResetText();
-            //this.txttennv.ResetText();
-            //this.txtdiachi.ResetText();
-            //this.dangaysinh.ResetText();
-            //this.txtdienthoai.ResetText();
-            //this.chnam.ResetText();
-            //this.txtmaquay.ResetText();
-            //// Cho thao tác trên các nút Thêm / Sửa / Xóa / Thoát
-            //this.btnthem.Enabled = true;
-            //this.btnsua.Enabled = true;
-            //this.btnxoa.Enabled = true;
-            //this.btndong.Enabled = true;
-            //// Không cho thao tác trên các nút Lưu / Hủy / Panel
-            //this.btnluu.Enabled = false;
-            //this.btnboqua.Enabled = false;
-            //this.panel1.Enabled = false;
+            // Xóa trống các đối tượng trong Panel
+            this.txtmasp.ResetText();
+            this.txttensp.ResetText();
+            this.txtgianhap.ResetText();
+            this.txtgiaban.ResetText();
+            this.txtsoluong.ResetText();
+            this.txtdonvitinh.ResetText();
+            // Cho thao tác trên các nút Thêm / Sửa / Xóa / Thoát
+            this.btnthem.Enabled = true;
+            this.btnsua.Enabled = true;
+            this.btnxoa.Enabled = true;
+            this.btndong.Enabled = true;
+            // Không cho thao tác trên các nút Lưu / Hủy / Panel
+            this.btnluu.Enabled = false;
+            this.btnboqua.Enabled = false;
+            this.panel1.Enabled = false;
             //dataGridView1_CellClick(null, null);
         }
 

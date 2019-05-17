@@ -20,9 +20,9 @@ namespace QuanLySieuThiVer1.BS_Layer
         {
             return db.ExecuteQueryDataSet("select * from SanPham", CommandType.Text);
         }
-        public bool ThemSanPham(string MaSP, string TenSP, string DonGia,string DonGiaBan,string SoLuong, DateTime NgayNhap,  string DonViTinh, ref string err)
+        public bool ThemSanPham(string MaSP, string TenSP, string DonGia,string DonGiaBan,string SoLuong,  string DonViTinh, ref string err)
         {
-            string sqlString = "Insert Into MaSP Values(" + "'" + MaSP + "',N'" + TenSP + "'" + DonGia + "'" + DonGiaBan + "'" + SoLuong + "'" + NgayNhap + ",N'" + DonViTinh + "')";
+            string sqlString = "Insert Into SanPham Values('"  + MaSP + "',N'" + TenSP + "',N'" + DonGia + "',N'" + DonGiaBan + "',N'" + SoLuong +  "',N'" + DonViTinh + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaSanPham(ref string err, string MaSP)
@@ -30,9 +30,9 @@ namespace QuanLySieuThiVer1.BS_Layer
             string sqlString = "Delete From SanPham Where MaSP='" + MaSP + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool CapNhatSanPham(string MaSP, string TenSP, string DonGia, string DonGiaBan, string SoLuong, DateTime NgayNhap, string DonViTinh, ref string err)
+        public bool CapNhatSanPham(string MaSP, string TenSP, string DonGia, string DonGiaBan, string SoLuong, string DonViTinh, ref string err)
         {
-            string sqlString = "Update SanPham Set TenSP=N'" + TenSP + "DonGia='" + DonGia + "DonGiaBan='" + DonGiaBan + "SoLuong='" + SoLuong + "NgayNhap='" + NgayNhap + ",DonViTinh=N'" + DonViTinh + "' Where MaSP='" + MaSP + "'";
+            string sqlString = "Update SanPham Set TenSP=N'" + TenSP + "',DonGia=N'" + DonGia + "',DonGiaBan=N'" + DonGiaBan + "',SoLuong=N'" + SoLuong + "',DonViTinh=N'" + DonViTinh + "' Where MaSP='" + MaSP + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 

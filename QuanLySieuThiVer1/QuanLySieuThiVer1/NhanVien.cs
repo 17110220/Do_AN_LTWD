@@ -14,6 +14,16 @@ namespace QuanLySieuThiVer1
 {
     public partial class NhanVien : Form
     {
+        PhongManHinh _form_resize;
+        private void _Load(object sender, EventArgs e)
+        {
+            _form_resize._get_initial_size();
+        }
+
+        private void _Resize(object sender, EventArgs e)
+        {
+            _form_resize._resize();
+        }
         DataTable dtNhanVien = null;
         bool Them;
         string err;
@@ -21,6 +31,9 @@ namespace QuanLySieuThiVer1
         public NhanVien()
         {
             InitializeComponent();
+            _form_resize = new PhongManHinh(this);
+            this.Load += _Load;
+            this.Resize += _Resize;
         }
         void LoadData()
         {
@@ -39,13 +52,13 @@ namespace QuanLySieuThiVer1
                 this.txtdiachi.ResetText();
                 this.dangaysinh.ResetText();
                 this.txtdienthoai.ResetText();
-                this.chnam.ResetText();
-                this.comboBox1.ResetText();
+                
                 this.btnluu.Enabled = false;
                 this.btnboqua.Enabled = false;
                 this.btnthem.Enabled = true;
                 this.btnsua.Enabled = true;
                 this.btnxoa.Enabled = true;
+                this.btndong.Enabled = true;
                 dataGridView1_CellClick(null, null);
             }
            
@@ -57,10 +70,6 @@ namespace QuanLySieuThiVer1
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLySieuThiDataSet.QuayGiaoDich' table. You can move, or remove it, as needed.
-            this.quayGiaoDichTableAdapter.Fill(this.quanLySieuThiDataSet.QuayGiaoDich);
-
-
 
             LoadData();
         }
@@ -80,10 +89,7 @@ namespace QuanLySieuThiVer1
             dataGridView1.Rows[r].Cells[3].Value.ToString();
             this.txtdienthoai.Text =
             dataGridView1.Rows[r].Cells[4].Value.ToString();                    
-            this.chnam.Text =
-            dataGridView1.Rows[r].Cells[5].Value.ToString();
-            this.comboBox1.Text =
-            dataGridView1.Rows[r].Cells[6].Value.ToString();
+         
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -96,13 +102,12 @@ namespace QuanLySieuThiVer1
             this.txtdiachi.ResetText();
             this.dangaysinh.ResetText();
             this.txtdienthoai.ResetText();
-            this.chnam.ResetText();
-            this.comboBox1.ResetText();
+           
             // Cho thao tác trên các nút Lưu / Hủy / Panel
             this.btnluu.Enabled = true;
             this.btnboqua.Enabled = true;
 
-            this.panel1.Enabled = true;
+            this.pannel.Enabled = true;
             // Không cho thao tác trên các nút Thêm / Xóa / Thoát
             this.btnthem.Enabled = false;
             this.btnsua.Enabled = false;
@@ -155,12 +160,12 @@ namespace QuanLySieuThiVer1
             // Kích hoạt biến Sửa
             Them = false;
             // Cho phép thao tác trên Panel
-            this.panel1.Enabled = true;
+            this.pannel.Enabled = true;
             dataGridView1_CellClick(null, null);
             // Cho thao tác trên các nút Lưu / Hủy / Panel
             this.btnluu.Enabled = true;
             this.btnboqua.Enabled = true;
-            this.panel1.Enabled = true;
+            this.pannel.Enabled = true;
             // Không cho thao tác trên các nút Thêm / Xóa / Thoát
             this.btnthem.Enabled = false;
             this.btnsua.Enabled = false;
@@ -180,8 +185,8 @@ namespace QuanLySieuThiVer1
                 try
                 {
                     // Thực hiện lệnh
-                    BLNhanVien blTp = new BLNhanVien();
-                    blTp.ThemNhanVien(this.txtmanv.Text, this.txttennv.Text,this.txtdiachi.Text,this.dangaysinh.Value,this.txtdienthoai.Text,(this.chnam.Checked ? true : false),this.comboBox1.Text, ref err);
+                    BLNhanVien blNV = new BLNhanVien();
+                    blNV.ThemNhanVien(this.txtmanv.Text, this.txttennv.Text, this.txtdiachi.Text, this.dangaysinh.Value,this.txtdienthoai.Text,this.txtGioiTinh.Text, ref err);
                     // Load lại dữ liệu trên DataGridView
                     LoadData();
                     // Thông báo
@@ -196,7 +201,7 @@ namespace QuanLySieuThiVer1
             {
                 // Thực hiện lệnh
                 BLNhanVien blTp = new BLNhanVien();
-                blTp.CapNhatNhanVien(this.txtmanv.Text, this.txttennv.Text, this.txtdiachi.Text, this.dangaysinh.Value, this.txtdienthoai.Text, (this.chnam.Checked ? true : false), this.comboBox1.Text, ref err);// Load lại dữ liệu trên DataGridView
+                blTp.CapNhatNhanVien(this.txtmanv.Text, this.txttennv.Text, this.txtdiachi.Text, this.dangaysinh.Value, this.txtdienthoai.Text, this.txtGioiTinh.Text, ref err);// Load lại dữ liệu trên DataGridView
                 LoadData();
                 // Thông báo
                 MessageBox.Show("Đã sửa xong!");
@@ -212,8 +217,6 @@ namespace QuanLySieuThiVer1
             this.txtdiachi.ResetText();
             this.dangaysinh.ResetText();
             this.txtdienthoai.ResetText();
-            this.chnam.ResetText();
-            this.comboBox1.ResetText();
             // Cho thao tác trên các nút Thêm / Sửa / Xóa / Thoát
             this.btnthem.Enabled = true;
             this.btnsua.Enabled = true;
@@ -222,8 +225,9 @@ namespace QuanLySieuThiVer1
             // Không cho thao tác trên các nút Lưu / Hủy / Panel
             this.btnluu.Enabled = false;
             this.btnboqua.Enabled = false;
-            this.panel1.Enabled = false;
+            this.pannel.Enabled = false;
             dataGridView1_CellClick(null, null);
+
         }
 
         private void btndong_Click(object sender, EventArgs e)

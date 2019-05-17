@@ -19,9 +19,9 @@ namespace QuanLySieuThiVer1.BS_Layer
         {
             return db.ExecuteQueryDataSet("select * from NhanVien", CommandType.Text);
         }
-        public bool ThemNhanVien(string MaNV, string HoTenNV, string DiaChi, DateTime NgSinh, string SDT, bool Nam,string MaQuayGiaoDich,  ref string err)
+        public bool ThemNhanVien(string MaNV, string HoTenNV, string DiaChi, DateTime NgSinh, string SDT, string GioiTinh,  ref string err)
         {
-            string sqlString = "Insert Into MaNV Values(" + "'" + MaNV + "',N'" + HoTenNV + "',N'" + DiaChi + "'" + NgSinh + "'" + SDT + "'" + Nam +"'"+MaQuayGiaoDich+ "')";
+            string sqlString = "Insert Into NhanVien Values(' " + MaNV + "',N'" + HoTenNV + "',N'" + DiaChi + "','" + NgSinh +"',N'"+SDT+"',N'"+GioiTinh+ "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaNhanVien(ref string err, string MaNV)
@@ -29,9 +29,9 @@ namespace QuanLySieuThiVer1.BS_Layer
             string sqlString = "Delete From NhanVien Where MaNV='" + MaNV + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool CapNhatNhanVien(string MaNV, string HoTenNV, string DiaChi, DateTime NgSinh, string SDT, bool Nam,string MaQuayGiaoDich , ref string err)
+        public bool CapNhatNhanVien(string MaNV, string HoTenNV, string DiaChi, DateTime NgSinh, string SDT, string GioiTinh, ref string err)
         {
-            string sqlString = "Update NhanVien Set HoTenNV=N'" + HoTenNV + ",DiaChi=N'" + DiaChi + ",NgSinh='" + NgSinh + ",SDT='" + SDT + ",Nam='" + Nam +",MaQuayGiaoDich='"+MaQuayGiaoDich+ "' Where MaNV='" + MaNV + "'";
+            string sqlString = "Update NhanVien Set HoTenNV=N'" + HoTenNV + "',DiaChi=N'" + DiaChi + "',NgSinh=N'" + NgSinh + "',SDT=N'" + SDT +  "' Where MaNV='" + MaNV + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
     }

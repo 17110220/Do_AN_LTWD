@@ -14,6 +14,16 @@ namespace QuanLySieuThiVer1
 {
     public partial class KhachHang : Form
     {
+        PhongManHinh _form_resize;
+        private void _Load(object sender, EventArgs e)
+        {
+            _form_resize._get_initial_size();
+        }
+
+        private void _Resize(object sender, EventArgs e)
+        {
+            _form_resize._resize();
+        }
         DataTable dtKhachHang = null;
         bool Them;
         string err;
@@ -21,6 +31,9 @@ namespace QuanLySieuThiVer1
         public KhachHang()
         {
             InitializeComponent();
+            _form_resize = new PhongManHinh(this);
+            this.Load += _Load;
+            this.Resize += _Resize;
         }
         void LoadData()
         {
@@ -43,6 +56,7 @@ namespace QuanLySieuThiVer1
                 this.btnthem.Enabled = true;
                 this.btnsua.Enabled = true;
                 this.btnxoa.Enabled = true;
+                this.btndong.Enabled = true;
                 dataGridView1_CellClick(null, null);
             }
 

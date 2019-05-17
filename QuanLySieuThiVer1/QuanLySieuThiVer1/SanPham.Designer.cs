@@ -48,8 +48,6 @@
             this.lbmasp = new System.Windows.Forms.Label();
             this.lbdanhmucquanlysanpham = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,10 +55,8 @@
             this.DonGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quanLySieuThiDataSet = new QuanLySieuThiVer1.QuanLySieuThiDataSet();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLySieuThiDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btndong
@@ -248,8 +244,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.btndong);
             this.panel1.Controls.Add(this.btnboqua);
             this.panel1.Controls.Add(this.btnluu);
@@ -270,27 +264,10 @@
             this.panel1.Controls.Add(this.lbmasp);
             this.panel1.Controls.Add(this.lbdanhmucquanlysanpham);
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(11, 8);
+            this.panel1.Location = new System.Drawing.Point(6, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1097, 434);
+            this.panel1.Size = new System.Drawing.Size(767, 434);
             this.panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(363, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Ngày Nhập";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(363, 105);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 27;
             // 
             // dataGridView1
             // 
@@ -306,7 +283,7 @@
             this.DonViTinh});
             this.dataGridView1.Location = new System.Drawing.Point(16, 188);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1078, 198);
+            this.dataGridView1.Size = new System.Drawing.Size(749, 198);
             this.dataGridView1.TabIndex = 29;
             // 
             // MaSP
@@ -345,16 +322,11 @@
             this.DonViTinh.HeaderText = "Đơn Vị Tính";
             this.DonViTinh.Name = "DonViTinh";
             // 
-            // quanLySieuThiDataSet
-            // 
-            this.quanLySieuThiDataSet.DataSetName = "QuanLySieuThiDataSet";
-            this.quanLySieuThiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 450);
+            this.ClientSize = new System.Drawing.Size(779, 450);
             this.Controls.Add(this.panel1);
             this.Name = "SanPham";
             this.Text = "SanPham";
@@ -362,7 +334,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLySieuThiDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -389,8 +360,6 @@
         private System.Windows.Forms.Label lbmasp;
         private System.Windows.Forms.Label lbdanhmucquanlysanpham;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
@@ -398,6 +367,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonViTinh;
-        private QuanLySieuThiDataSet quanLySieuThiDataSet;
+        
     }
 }

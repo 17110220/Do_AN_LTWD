@@ -7,47 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using QuanLySieuThiVer1.BS_Layer;
 
 namespace QuanLySieuThiVer1
 {
     public partial class DangNhap : Form
     {
-        string err;
         public DangNhap()
         {
             InitializeComponent();
         }
-
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-KMNS09Q\SQLEXPRESS;Initial Catalog=QuanLySieuThi;Integrated Security=True");
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            User upass = new User();
-            if (txtUserName.Text.Trim().Equals("admin") && txtPassWord.Text.Trim() == "123")
+            String query = "SELECT * FROM Phan_quyen WHERE TenDangNhap = '" + txtUserName.Text + "' AND MatKhau = '" + txtPassWord.Text + "' ";
+            SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows.Count > 0) //Kiểm tra số hàng
             {
+                MessageBox.Show("Đăng Nhâp Thành Công!");
+                Form main = new Main();
+                this.Close();
                 Main.bIsLogin = true;
-                Close();
+                main.ShowDialog();
             }
-
             else
             {
-                try
-                {
-                    MessageBox.Show("Không đúng tên người dùng / mật khẩu !!!", "Thông báo");
-                    txtUserName.Focus();
-                }
-                catch
-                {
-                    MessageBox.Show("Lỗi!");
-                }
+                MessageBox.Show("Kiểm tra lại tên tài khoản hoạc mật khẩu!");
             }
-        }       
-
-        private void BtnThoat_Click(object sender, EventArgs e)
-        {
-       DialogResult traloi;
-            traloi = MessageBox.Show("Chắc không?", "Trả lời",
-            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (traloi == DialogResult.OK)
-                Close();
         }
+
     }
 }
+

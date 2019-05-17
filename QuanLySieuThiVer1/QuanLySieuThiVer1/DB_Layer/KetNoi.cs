@@ -10,17 +10,20 @@ namespace QuanLySieuThiVer1.DB_Layer
 {
     class KetNoi
     {
+       
        //Chuỗi kết nối
         string strConnectionString = @"Data Source=DESKTOP-KMNS09Q\SQLEXPRESS;Initial Catalog=QuanLySieuThi;Integrated Security=True";
-       public static SqlConnection conn = null;
+        public static SqlConnection conn = null;
         SqlCommand comm = null;
         // Đối tượng đưa dữ liệu vào DataTable dtThanhPho
         SqlDataAdapter da = null;
+        //kết nối
         public KetNoi()
         {
             conn = new SqlConnection(strConnectionString);
             comm = conn.CreateCommand();
         }
+        //lấy dữ liệu
         public DataSet ExecuteQueryDataSet(string strSQL, CommandType ct)
         {
             if (conn.State == ConnectionState.Open)
@@ -33,6 +36,71 @@ namespace QuanLySieuThiVer1.DB_Layer
             da.Fill(ds);
             return ds;
         }
+        //tìm kiếm
+        public string FindNameExecute(string strSQL)
+        {
+            string ok = null;
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            //conn.Open();
+            comm = new SqlCommand(strSQL, conn);
+            comm.Connection.Open();
+            try
+            {
+                var reader = comm.ExecuteReader();
+                while (reader.Read())
+                {
+                    ok = reader.GetString(1);
+                }
+
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return ok;
+        }
+        //tính toán
+        public string Sum(string strSQL)
+        {
+            string ok = null;
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            //conn.Open();
+            comm = new SqlCommand(strSQL, conn);
+            comm.Connection.Open();
+            try
+            {
+                ok = comm.ExecuteScalar().ToString();
+
+            }
+            catch (SqlException ex)
+            {
+                ok = "error";
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return ok;
+        }
+
+        //lấy dữ liêu
+    public DataSet ExecuteQueryDataSet1(string strSQL)
+        {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            conn.Open();
+            da = new SqlDataAdapter(strSQL, conn);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+        }
+
         public bool MyExecuteNonQuery(string strSQL, CommandType ct, ref string error)
         {
             bool f = false;
